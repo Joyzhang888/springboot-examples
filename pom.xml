@@ -38,6 +38,7 @@
         <module>chapter12-rocketmq</module>
         <module>chapter10-security</module>
         <module>chapter10-security-jwt</module>
+        <module>chapter11-caching-redis</module>
     </modules>
 
     <properties>
