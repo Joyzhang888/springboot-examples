@@ -43,7 +43,7 @@ public class EHCacheConfiguration {
     @Bean
     public EhCacheManagerFactoryBean ehCacheManagerFactoryBean(){
         logger.info("CacheConfiguration.ehCacheManagerFactoryBean()");
-        EhCacheManagerFactoryBean cacheManagerFactoryBean = new EhCacheManagerFactoryBean ();
+        EhCacheManagerFactoryBean cacheManagerFactoryBean = new EhCacheManagerFactoryBean();
         cacheManagerFactoryBean.setConfigLocation (new ClassPathResource("ehcache.xml"));
         //也说是说通过这个来设置cache的基地是这里的Spring独用,还是跟别的(如hibernate的Ehcache共享)
         cacheManagerFactoryBean.setShared(true);
