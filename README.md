@@ -32,7 +32,8 @@ spring boot 学习系列 (使用版本 1.5.3)
 * 26.chapter10-security> spring boot 整合security 实现简单权限控制.	
 * 27.chapter10-security-jwt> spring boot security token 整合实现认证登陆.
 * 28.chapter11-caching-ehcache> spring boot框架缓存系列 ehcache .
-* 29.chapter12-rocketmq> spring boot 整合rocketmq 测试.	
+* 29.chapter11-caching-redis> redis 使用annotation 方式实现cache .
+* 30.chapter12-rocketmq> spring boot 整合rocketmq 测试.	
 
 ## 后续计划...
 * 日志系列：
@@ -43,8 +44,6 @@ spring boot 学习系列 (使用版本 1.5.3)
      *  memcached
      *  Elasticsearch
      *  Solr
-* 缓存系列：
-     *  annotation-redis-cache
 * 权限系列：
      *  OAuth2
 
