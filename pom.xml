@@ -18,6 +18,7 @@
         <module>chapter4-velocity</module>
         <module>chapter4-jsp</module>
         <module>chapter5-swagger</module>
+        <module>chapter5-task</module>
         <module>chapter6-handle-exception</module>
         <module>chapter6-servlet</module>
         <module>chapter6-aop-log</module>
