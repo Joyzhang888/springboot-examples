@@ -33,10 +33,10 @@ public class MyTask {
      * 这个方法每10秒打印一次.
      * 使用cron表达式 指定：秒，分钟，小时，日期，月份，星期，年（可选）.
      */
-//    @Scheduled(cron = "0/10 * * * * *")
-//    public void test() {
-//        System.out.println("test......" + new Date().getTime());
-//    }
+     @Scheduled(cron = "0/10 * * * * *")
+     public void test() {
+        System.out.println("test......" + new Date().getTime());
+     }
 
 
     /**
@@ -56,10 +56,10 @@ public class MyTask {
     /**
      * 使用外部的cron 表达式.
      */
-    @Scheduled(cron = "${my.cron}")
-    public void test4() {
-        System.out.println("test4..." + new Date().getTime());
-    }
+//    @Scheduled(cron = "${my.cron}")
+//    public void test4() {
+//        System.out.println("test4..." + new Date().getTime());
+//    }
 
 
 }
