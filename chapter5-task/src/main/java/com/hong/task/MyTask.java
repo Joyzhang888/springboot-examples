@@ -33,19 +33,19 @@ public class MyTask {
      * 这个方法每10秒打印一次.
      * 使用cron表达式 指定：秒，分钟，小时，日期，月份，星期，年（可选）.
      */
-    @Scheduled(cron = "0/10 * * * * *")
-    public void test(){
-        System.out.println("test......"+new Date().getTime());
-    }
+//    @Scheduled(cron = "0/10 * * * * *")
+//    public void test() {
+//        System.out.println("test......" + new Date().getTime());
+//    }
 
 
     /**
      * 每隔6秒执行.
      */
-    @Scheduled(fixedDelay = 6000)
-    public void test2(){
-        System.out.println("test2..."+new Date().getTime());
-    }
+//    @Scheduled(fixedDelay = 6000)
+//    public void test2() {
+//        System.out.println("test2..." + new Date().getTime());
+//    }
 
 //    @Scheduled(fixedDelayString = "5000")
 //    public void test3(){
@@ -53,6 +53,13 @@ public class MyTask {
 //    }
 
 
+    /**
+     * 使用外部的cron 表达式.
+     */
+    @Scheduled(cron = "${my.cron}")
+    public void test4() {
+        System.out.println("test4..." + new Date().getTime());
+    }
 
 
 }
