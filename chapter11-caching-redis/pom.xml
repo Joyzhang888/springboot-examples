@@ -12,4 +12,26 @@
     <artifactId>chapter11-caching-redis</artifactId>
 
 
+    <dependencies>
+
+        <!-- Spring Boot 对jpa的支持 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!-- Spring 对Cache 的支持  -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-cache</artifactId>
+        </dependency>
+
+        <!-- redis 相关支持 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-redis</artifactId>
+            <version>1.3.2.RELEASE</version>
+        </dependency>
+    </dependencies>
+
 </project>

@@ -22,7 +22,7 @@ public class EHCacheController {
     private StudentService studentService;
 
     @GetMapping("/cache")
-    public Student test(){
-        return studentService.findById(1L);
+    public Student test() {
+        return studentService.findById(2L);
     }
 }

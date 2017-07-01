@@ -1,9 +1,9 @@
 # springboot-examples
 > spring boot 出现的目的是为了使spring  framework 的应用开发变得简单，更容易上手非侵入性的提供了一套常用的配置，但是用户可以随时覆盖，
->   提供了更多的基础性、非业务性的功能（内置Web容器、权限认证机制、监控、应用配置管理等等）。完全不依赖于xml。 
+  提供了更多的基础性、非业务性的功能（内置Web容器、权限认证机制、监控、应用配置管理等等）。完全不依赖于xml。 
 
 spring boot 学习系列 (使用版本 1.5.3)
-<i class="icon-reorder"></i>
+
 * 1.chapter1> springboot 项目结构解析 
 * 2.chapter2> 配置文件详解：自定义属性、随机数、多环境配置等（目前只使用properties,后续添加yml的配置方式用法）
 * 3.chapter3> spring boot 构建restful api以及单元测试,替换默认json 解析框架，使用fastjson
@@ -28,11 +28,12 @@ spring boot 学习系列 (使用版本 1.5.3)
 * 22.chapter9-redis-cluster> 添加了注释说明了JedisCluster 与RedisTemplate 操作RedisCluster 的一些使用原理 .
 * 23.chapter9-redis-session> spring boot 整合Redis .
 * 24.chapter10-shiro> spring boot 整合shiro 基本实例
- * 25.chapter10-jwt> spring boot 整合jwt 实现token 认证.
- * 26.chapter10-security> spring boot 整合security 实现简单权限控制.
+* 25.chapter10-jwt> spring boot 整合jwt 实现token 认证.	
+* 26.chapter10-security> spring boot 整合security 实现简单权限控制.	
 * 27.chapter10-security-jwt> spring boot security token 整合实现认证登陆.
 * 28.chapter11-caching-ehcache> spring boot框架缓存系列 ehcache .
- * 29.chapter12-rocketmq> spring boot 整合rocketmq 测试.
+* 29.chapter11-caching-redis> redis 使用annotation 方式实现cache .
+* 30.chapter12-rocketmq> spring boot 整合rocketmq 测试.	
 
 ## 后续计划...
 * 日志系列：
@@ -43,8 +44,6 @@ spring boot 学习系列 (使用版本 1.5.3)
      *  memcached
      *  Elasticsearch
      *  Solr
-* 缓存系列：
-     *  annotation-redis-cache
 * 权限系列：
      *  OAuth2
 
