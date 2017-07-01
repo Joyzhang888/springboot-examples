@@ -3,7 +3,7 @@
   提供了更多的基础性、非业务性的功能（内置Web容器、权限认证机制、监控、应用配置管理等等）。完全不依赖于xml。 
 
 spring boot 学习系列 (使用版本 1.5.3)
-
+<i class="icon-reorder"></i>
 * 1.chapter1> springboot 项目结构解析 
 * 2.chapter2> 配置文件详解：自定义属性、随机数、多环境配置等（目前只使用properties,后续添加yml的配置方式用法）
 * 3.chapter3> spring boot 构建restful api以及单元测试,替换默认json 解析框架，使用fastjson
