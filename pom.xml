@@ -35,10 +35,11 @@
         <module>chapter9-redis-session</module>
         <module>chapter10-jwt</module>
         <module>chapter10-shiro</module>
-        <module>chapter11-caching-ehcache</module>
-        <module>chapter12-rocketmq</module>
         <module>chapter10-security</module>
         <module>chapter10-security-jwt</module>
+        <module>chapter10-security-oauth2.0</module>
+        <module>chapter11-caching-ehcache</module>
+        <module>chapter12-rocketmq</module>
         <module>chapter11-caching-redis</module>
     </modules>
 
