@@ -3,12 +3,20 @@
 #核心配置.
 github:
       client:
-             clientId: cf4314b2137f38c2363e
-             clientSecret: ede891506dd6520434ae53da630c8f0e79136ffd
+             clientId: ad3970094c3c44de5db3
+             clientSecret: 55ed3e86326d3d342415b5451eb820c91f52a49b
              accessTokenUri: https://github.com/login/oauth/access_token
              userAuthorizationUri: https://github.com/login/oauth/authorize
              clientAuthenticationScheme: form
-             tokenName: tokenName
+             tokenName: oauth_token
              authenticationScheme: query
       resource:
              userInfoUri: https://api.github.com/user
+# THYMELEAF
+spring:
+        thymeleaf:
+                   encoding: UTF-8
+                   # 热部署静态文件
+                   cache: false
+                   # 使用HTML5标准
+                   mode: HTML5

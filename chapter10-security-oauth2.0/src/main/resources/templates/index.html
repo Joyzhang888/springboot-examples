@@ -2,18 +2,19 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:th="http://www.thymeleaf.org"
 	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
-<head th:replace="~{fragments/header :: header}">
+<head >
 </head>
 <body>
+    <object data="fragments/header.html" th:include="fragments/header::header" th:remove="tag" />
 	<div class="container">
       	<div class="mt-3">
-        	<h2>Hello Spring Security</h2>
+        	<h2>Hello github 用户</h2>
         </div>
 		<div sec:authorize="isAuthenticated()" th:if="${principal}" th:object="${principal}">
 			<p>已有用户登录</p>
 			<p>登录的用户为: <span sec:authentication="name"></span></p>
 			<p>用户权限为: <span th:text="*{userAuthentication.authorities}"></span></p>
- 			<p>用户头像为: <img alt="" class="avatar width-full rounded-2" height="230" th:src="*{userAuthentication.details.avatar_url}" width="230"></p>
+			<p>用户头像为: <img alt="" class="avatar width-full rounded-2"  th:src="*{userAuthentication.details.avatar_url}" height="100" width="100" /></p>
  			
 		</div>
  		<div sec:authorize="isAnonymous()">
@@ -21,7 +22,7 @@
 		</div>
 	</div>
 	<!-- /.container -->
- 
-	<div th:replace="~{fragments/footer :: footer}">...</div>
+
+	<object data="fragments/footer.html" th:include="fragments/footer::footer" th:remove="tag" />
 </body>
 </html>
