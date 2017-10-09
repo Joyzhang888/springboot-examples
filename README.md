@@ -44,11 +44,10 @@ spring boot 学习系列 (使用版本 1.5.3)
      *  memcached
      *  Elasticsearch
      *  Solr
-* 权限系列：
-     *  OAuth2
 
 * Message ......     
-
+     * kafka
+     * rabbitmq
 ## 参考资源：
 * [推荐阿里小马哥视频](https://segmentfault.com/n/1330000009887617) 
 * https://git.oschina.net/didispace/SpringBoot-Learning
