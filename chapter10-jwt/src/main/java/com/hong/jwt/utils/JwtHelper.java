@@ -109,9 +109,9 @@ public class JwtHelper {
         if (device.isNormal()) {
             audience = AUDIENCE_WEB;//Pc端
         } else if (device.isTablet()) {
-            audience = AUDIENCE_TABLET;//Pc端
+            audience = AUDIENCE_TABLET;//平板
         } else if (device.isMobile()) {
-            audience = AUDIENCE_MOBILE;//平板
+            audience = AUDIENCE_MOBILE;//手机
         }
         return audience;
     }
