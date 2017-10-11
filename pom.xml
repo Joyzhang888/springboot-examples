@@ -41,6 +41,7 @@
         <module>chapter11-caching-ehcache</module>
         <module>chapter12-rocketmq</module>
         <module>chapter11-caching-redis</module>
+        <module>springboot-dubbo</module>
     </modules>
 
     <properties>
