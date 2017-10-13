@@ -35,7 +35,18 @@ spring boot 学习系列 (使用版本 1.5.3)
 - [x] 29.chapter11-caching-redis> redis 使用annotation 方式实现cache .
 - [x] 30.chapter12-rocketmq> spring boot 整合rocketmq 测试.	
 - [x] 31.chapter12-dubbo> spring boot 整合dubbo两种使用方式.
-                        
+
+## 项目运行
+```
+git clone https://github.com/t-hong/vue2-manage.git
+
+更新所有maven 依赖
+
+各个模块相对独立，可直接运行spring boot 启动类（推荐） 或者加入tomcat运行的方式 
+
+注意：部分模块需要第三方服务的，一定要检查配置连接是否正确
+
+...                        
 
 ## 后续计划...
 * 日志系列：
