@@ -34,9 +34,8 @@ spring boot 学习系列 (使用版本 1.5.3)
 - [x] 28.chapter11-caching-ehcache> spring boot框架缓存系列 ehcache .
 - [x] 29.chapter11-caching-redis> redis 使用annotation 方式实现cache .
 - [x] 30.chapter12-rocketmq> spring boot 整合rocketmq 测试.	
-- [x] 31.chapter12-dubbo> spring boot 使用dubbo两种方式：
-                          1.使用xml 配置文件方式，spring boot 启动时倒入xml文件.
-                          2.使用第三方开发的spring-boot-starter-dubbo 方式非侵入值使用dubbo 开发.
+- [x] 31.chapter12-dubbo> spring boot 整合dubbo两种使用方式.
+                        
 
 ## 后续计划...
 * 日志系列：
