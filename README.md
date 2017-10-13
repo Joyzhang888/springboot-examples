@@ -46,8 +46,7 @@ git clone https://github.com/t-hong/vue2-manage.git
 
 注意：部分模块需要第三方服务的，一定要检查配置连接是否正确
 
-...                        
-
+```             
 ## 后续计划...
 * 日志系列：
      *  Log4J2
