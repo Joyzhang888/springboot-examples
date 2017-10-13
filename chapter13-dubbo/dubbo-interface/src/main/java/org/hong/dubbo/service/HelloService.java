@@ -9,5 +9,5 @@ package org.hong.dubbo.service;
  */
 public interface HelloService {
 
-    String hello();
+    String hello(String msg);
 }

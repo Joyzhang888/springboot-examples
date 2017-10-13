@@ -11,7 +11,7 @@ public class DubboClientApplication {
     public static void main(String[] args) {
         ConfigurableApplicationContext run = SpringApplication.run(DubboClientApplication.class, args);
         TestService helloService = run.getBean(TestService.class);
-        String hello = helloService.hello();
+        String hello = helloService.hello("spring-boot-starter-dubbo");
         System.out.println(hello);
     }
 }

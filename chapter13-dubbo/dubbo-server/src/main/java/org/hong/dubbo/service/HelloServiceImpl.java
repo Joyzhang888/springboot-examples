@@ -13,7 +13,7 @@ import com.alibaba.dubbo.config.annotation.Service;
 public class HelloServiceImpl implements HelloService {
 
     @Override
-    public String   hello() {
-        return "hello springboot dubbo";
+    public String   hello(String msg) {
+        return "hello springboot: "+msg;
     }
 }

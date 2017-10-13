@@ -9,7 +9,7 @@ public class TestService {
     @Reference(version = "1.0.0")
     public HelloService helloService;
 
-    public String hello() {
-        return helloService.hello() ;
+    public String hello(String msg) {
+        return helloService.hello(msg) ;
     }
 }

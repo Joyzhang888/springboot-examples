@@ -8,7 +8,8 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>dubbo-server</artifactId>
+
+    <artifactId>dubbo-xml-consumer</artifactId>
 
     <dependencies>
         <dependency>
@@ -17,19 +18,26 @@
             <version>${project.parent.version}</version>
         </dependency>
 
-        <!--
-           Spring Boot Dubbo 依赖
-           阿里teaey 提供; https://github.com/teaey/spring-boot-starter-dubbo
 
-           其实就是在阿里dubbo之上 通过spring boot 开发的starter.
-           查看依赖也会发现有依赖dubbo jar
-         -->
+        <!--dubbo 依赖 -->
         <dependency>
-            <groupId>io.dubbo.springboot</groupId>
-            <artifactId>spring-boot-starter-dubbo</artifactId>
-            <version>${dubbo-spring-boot}</version>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+            <version>2.5.3</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework</groupId>
+                    <artifactId>spring</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!--zkClient 依赖-->
+        <dependency>
+            <groupId>com.github.sgroschupf</groupId>
+            <artifactId>zkclient</artifactId>
+            <version>0.1</version>
         </dependency>
     </dependencies>
-
 
 </project>
