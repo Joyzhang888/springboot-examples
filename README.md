@@ -36,7 +36,7 @@ spring boot 学习系列 (使用版本 1.5.3)
 - [x] 30.chapter12-rocketmq> spring boot 整合rocketmq 测试.	
 - [x] 31.chapter12-dubbo> spring boot 整合dubbo两种使用方式.
 
-## 项目运行
+## DEMO运行
 ```
 git clone https://github.com/t-hong/vue2-manage.git
 
