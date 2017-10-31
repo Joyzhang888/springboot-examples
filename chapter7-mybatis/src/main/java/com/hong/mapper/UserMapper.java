@@ -29,8 +29,6 @@ public interface UserMapper {
      *  具体详解请查看：http://www.mybatis.org/mybatis-3/zh/java-api.html
      */
 
-
-
     /** 返回结果的绑定 ,通过@Results 和@Result 来绑定
      *  通过情况下，没有配置的话，字段不相同的就不会对应上，同时如果配置了结果绑定时，部分字段没有对应的话，那么对应字段的值为null
      * **/

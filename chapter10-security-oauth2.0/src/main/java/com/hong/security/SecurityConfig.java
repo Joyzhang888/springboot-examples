@@ -10,7 +10,6 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.oauth2.client.DefaultOAuth2ClientContext;
 import org.springframework.security.oauth2.client.OAuth2ClientContext;
 import org.springframework.security.oauth2.client.OAuth2RestTemplate;
 import org.springframework.security.oauth2.client.filter.OAuth2ClientAuthenticationProcessingFilter;
@@ -26,6 +25,7 @@ import javax.servlet.Filter;
  * security 项目安全的配置.
  * Created by hong on 2017/7/10.
  */
+@SuppressWarnings("ALL")
 @EnableWebSecurity
 @EnableOAuth2Client // 启用 OAuth 2.0 客户端
 @EnableGlobalMethodSecurity(prePostEnabled = true) // 启用方法安全设置
@@ -43,6 +43,7 @@ public class SecurityConfig  extends WebSecurityConfigurerAdapter {
      */
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        //noinspection AlibabaAvoidCommentBehindStatement
         http.addFilterBefore(ssoFilter(), BasicAuthenticationFilter.class)
                 .antMatcher("/**")
                 .authorizeRequests()
