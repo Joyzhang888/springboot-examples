@@ -22,6 +22,10 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2 // 启用 Swagger
 public class SwaggerConfig {
 
+    /**
+     *  localhost:8080/swagger-ui.html 访问默认首页.
+     * @return
+     */
     @Bean
     public Docket createRestApi() {
 
