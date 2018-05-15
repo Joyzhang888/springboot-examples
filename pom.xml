@@ -42,6 +42,7 @@
         <module>chapter11-caching-redis</module>
         <module>chapter12-rocketmq</module>
         <module>chapter13-dubbo</module>
+        <module>chapter14-mongo</module>
     </modules>
 
     <properties>
