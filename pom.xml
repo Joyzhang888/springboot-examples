@@ -23,7 +23,7 @@
         <module>springboot-servlet</module>
         <module>springboot-aoplog</module>
         <module>chapter7-spring-data-jpa</module>
-        <module>chapter7-jdbctemplate</module>
+        <module>springboot-jdbctemplate</module>
         <module>chapter7-mybatis</module>
         <module>chapter7-mybatis-mapper-plugin</module>
         <module>chapter8-jdbctemplate-mutil-datasource</module>

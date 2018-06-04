@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>chapter7-jdbctemplate</artifactId>
+    <artifactId>springboot-jdbctemplate</artifactId>
 
 
     <dependencies>
