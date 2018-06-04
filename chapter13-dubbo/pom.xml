@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springboot-dubbo</artifactId>
+    <artifactId>chapter13-dubbo</artifactId>
     <packaging>pom</packaging>
     <modules>
         <module>dubbo-interface</module>
