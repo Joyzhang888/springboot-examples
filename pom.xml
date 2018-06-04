@@ -14,7 +14,7 @@
         <module>springboot-rest</module>
         <module>springboot-jersey</module>
         <module>chapter4-thymeleaf</module>
-        <module>chapter4-freemarker</module>
+        <module>springboot-freemarker</module>
         <module>chapter4-velocity</module>
         <module>chapter4-jsp</module>
         <module>chapter5-swagger</module>
