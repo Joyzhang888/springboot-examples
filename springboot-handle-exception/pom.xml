@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>chapter6-handle-exception</artifactId>
+    <artifactId>springboot-handle-exception</artifactId>
 
 
     <dependencies>
