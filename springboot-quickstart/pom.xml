@@ -8,7 +8,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>chapter1</artifactId>
+    <artifactId>springboot-quickstart</artifactId>
 
     <dependencies>
         <!--默认spring-boot-starter-web包含了tomcat ，所以打包成war包时排除tomcat.由容器提供. -->
