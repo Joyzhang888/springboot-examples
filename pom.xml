@@ -31,7 +31,7 @@
         <module>springboot-jpa-mutil-datasource</module>
         <module>springboot-redis</module>
         <module>springboot-redis-cache</module>
-        <module>chapter9-redis-cluster</module>
+        <module>springboot-redis-cluster</module>
         <module>chapter9-redis-session</module>
         <module>chapter10-jwt</module>
         <module>chapter10-shiro</module>
