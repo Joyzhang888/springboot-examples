@@ -37,7 +37,6 @@
         <module>chapter10-shiro</module>
         <module>springboot-security</module>
         <module>springboot-security-jwt</module>
-        <module>chapter10-security-oauth2.0</module>
         <module>chapter11-caching-ehcache</module>
         <module>chapter11-caching-redis</module>
         <module>chapter12-rocketmq</module>
