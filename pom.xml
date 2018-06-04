@@ -33,7 +33,7 @@
         <module>springboot-redis-cache</module>
         <module>springboot-redis-cluster</module>
         <module>springboot-redis-session</module>
-        <module>chapter10-jwt</module>
+        <module>springboot-jwt</module>
         <module>chapter10-shiro</module>
         <module>chapter10-security</module>
         <module>chapter10-security-jwt</module>

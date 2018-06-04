@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>chapter10-jwt</artifactId>
+    <artifactId>springboot-jwt</artifactId>
 
 
     <dependencies>
