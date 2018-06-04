@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>chapter7-spring-data-jpa</artifactId>
+    <artifactId>springboot-spring-data-jpa</artifactId>
 
 
     <dependencies>
