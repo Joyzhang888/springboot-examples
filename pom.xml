@@ -40,7 +40,7 @@
         <module>springboot-caching-ehcache</module>
         <module>springboot-caching-redis</module>
         <module>springboot-rocketmq</module>
-        <module>chapter13-dubbo</module>
+        <module>springboot-dubbo</module>
         <module>chapter14-mongo</module>
         <module>springboot-elasticsearch</module>
     </modules>
