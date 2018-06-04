@@ -11,7 +11,7 @@
     <modules>
         <module>springboot-quickstart</module>
         <module>springboot-profiles</module>
-        <module>chapter3</module>
+        <module>springboot-rest</module>
         <module>chapter3-jersey</module>
         <module>chapter4-thymeleaf</module>
         <module>chapter4-freemarker</module>
