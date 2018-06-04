@@ -27,7 +27,7 @@
         <module>springboot-mybatis</module>
         <module>springboot-mybatis-mapper-plugin</module>
         <module>springboot-jdbctemplate-mutil-datasource</module>
-        <module>chapter8-mybatis-mutil-datasource</module>
+        <module>springboot-mybatis-mutil-datasource</module>
         <module>springboot-jpa-mutil-datasource</module>
         <module>chapter9-redis</module>
         <module>chapter9-redis-cache</module>

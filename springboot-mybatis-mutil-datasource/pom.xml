@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>chapter8-mybatis-mutil-datasource</artifactId>
+    <artifactId>springboot-mybatis-mutil-datasource</artifactId>
 
 
     <dependencies>
