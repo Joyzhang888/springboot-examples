@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>chapter11-caching-ehcache</artifactId>
+    <artifactId>springboot-caching-ehcache</artifactId>
 
 
     <dependencies>
