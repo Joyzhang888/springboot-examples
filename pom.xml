@@ -13,7 +13,7 @@
         <module>springboot-profiles</module>
         <module>springboot-rest</module>
         <module>springboot-jersey</module>
-        <module>chapter4-thymeleaf</module>
+        <module>springboot-thymeleaf</module>
         <module>springboot-freemarker</module>
         <module>chapter4-velocity</module>
         <module>springboot-jsp</module>
