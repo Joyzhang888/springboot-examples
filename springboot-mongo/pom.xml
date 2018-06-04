@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>chapter14-mongo</artifactId>
+    <artifactId>springboot-mongo</artifactId>
 
 
 </project>
