@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>chapter7-mybatis-mapper-plugin</artifactId>
+    <artifactId>springboot-mybatis-mapper-plugin</artifactId>
 
     <dependencies>
         <!-- mybatis -->
