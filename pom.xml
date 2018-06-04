@@ -20,7 +20,7 @@
         <module>springboot-swagger</module>
         <module>springboot-task</module>
         <module>springboot-handle-exception</module>
-        <module>chapter6-servlet</module>
+        <module>springboot-servlet</module>
         <module>springboot-aoplog</module>
         <module>chapter7-spring-data-jpa</module>
         <module>chapter7-jdbctemplate</module>
