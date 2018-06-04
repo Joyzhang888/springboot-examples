@@ -17,7 +17,7 @@
         <module>springboot-freemarker</module>
         <module>springboot-velocity</module>
         <module>springboot-jsp</module>
-        <module>chapter5-swagger</module>
+        <module>springboot-swagger</module>
         <module>chapter5-task</module>
         <module>chapter6-handle-exception</module>
         <module>chapter6-servlet</module>
