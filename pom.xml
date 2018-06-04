@@ -24,7 +24,7 @@
         <module>springboot-aoplog</module>
         <module>chapter7-spring-data-jpa</module>
         <module>springboot-jdbctemplate</module>
-        <module>chapter7-mybatis</module>
+        <module>springboot-mybatis</module>
         <module>chapter7-mybatis-mapper-plugin</module>
         <module>chapter8-jdbctemplate-mutil-datasource</module>
         <module>chapter8-mybatis-mutil-datasource</module>
