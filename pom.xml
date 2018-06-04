@@ -43,6 +43,7 @@
         <module>chapter12-rocketmq</module>
         <module>chapter13-dubbo</module>
         <module>chapter14-mongo</module>
+        <module>springboot-elasticsearch</module>
     </modules>
 
     <properties>
