@@ -39,7 +39,7 @@
         <module>springboot-security-jwt</module>
         <module>springboot-caching-ehcache</module>
         <module>springboot-caching-redis</module>
-        <module>chapter12-rocketmq</module>
+        <module>springboot-rocketmq</module>
         <module>chapter13-dubbo</module>
         <module>chapter14-mongo</module>
         <module>springboot-elasticsearch</module>
