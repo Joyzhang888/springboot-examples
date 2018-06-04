@@ -16,7 +16,7 @@
         <module>chapter4-thymeleaf</module>
         <module>springboot-freemarker</module>
         <module>chapter4-velocity</module>
-        <module>chapter4-jsp</module>
+        <module>springboot-jsp</module>
         <module>chapter5-swagger</module>
         <module>chapter5-task</module>
         <module>chapter6-handle-exception</module>
