@@ -26,7 +26,7 @@
         <module>springboot-jdbctemplate</module>
         <module>springboot-mybatis</module>
         <module>springboot-mybatis-mapper-plugin</module>
-        <module>chapter8-jdbctemplate-mutil-datasource</module>
+        <module>springboot-jdbctemplate-mutil-datasource</module>
         <module>chapter8-mybatis-mutil-datasource</module>
         <module>chapter8-jpa-mutil-datasource</module>
         <module>chapter9-redis</module>
