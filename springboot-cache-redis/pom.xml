@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>springboot-caching-redis</artifactId>
+    <artifactId>springboot-cache-redis</artifactId>
 
 
     <dependencies>
