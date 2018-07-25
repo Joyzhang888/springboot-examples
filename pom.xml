@@ -37,8 +37,8 @@
         <module>springboot-shiro</module>
         <module>springboot-security</module>
         <module>springboot-security-jwt</module>
-        <module>springboot-caching-ehcache</module>
-        <module>springboot-caching-redis</module>
+        <module>springboot-cache-ehcache</module>
+        <module>springboot-cache-redis</module>
         <module>springboot-rocketmq</module>
         <module>springboot-dubbo</module>
         <module>springboot-mongo</module>

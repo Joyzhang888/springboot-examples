@@ -21,11 +21,34 @@
             <version>${elasticsearch.version}</version>
         </dependency>
 
+        <!-- TransportClient -->
         <dependency>
             <groupId>org.elasticsearch.client</groupId>
             <artifactId>transport</artifactId>
             <version>${elasticsearch.version}</version>
         </dependency>
+
+        <!--
+        elasticsearch 5.0引入了一个新的客户端 RestClient ，使用HTTP API elasticsearch代替内部协议。
+        这需要更少依赖关系。你也不需要关注那么多版本，当前客户端也可以用于elasticsearch 2.x版本。
+        -->
+        <!-- https://mvnrepository.com/artifact/org.elasticsearch.client/elasticsearch-rest-client -->
+        <dependency>
+            <groupId>org.elasticsearch.client</groupId>
+            <artifactId>elasticsearch-rest-client</artifactId>
+            <version>5.6.8</version>
+        </dependency>
+
+
+
+        <!-- IK分词器 -->
+        <!-- https://mvnrepository.com/artifact/org.elasticsearch/elasticsearch-analysis-ik -->
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch-analysis-ik</artifactId>
+            <version>5.2.2</version>
+        </dependency>
+
 
         <!-- 使用第三方json 解析框架-->
         <dependency>

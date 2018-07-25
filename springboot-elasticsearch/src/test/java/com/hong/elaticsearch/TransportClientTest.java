@@ -5,11 +5,18 @@ import com.alibaba.fastjson.JSONObject;
 import com.hong.elasticsearch.ElasticsearchApplication;
 import com.hong.elasticsearch.repository.ESRepository;
 import com.hong.elasticsearch.repository.TestIndexRepository;
+import org.elasticsearch.action.search.SearchResponse;
+import org.elasticsearch.action.search.SearchType;
 import org.elasticsearch.action.update.UpdateResponse;
 import org.elasticsearch.client.transport.TransportClient;
 import org.elasticsearch.common.xcontent.XContentBuilder;
 import org.elasticsearch.common.xcontent.XContentFactory;
+import org.elasticsearch.index.query.BoolQueryBuilder;
+import org.elasticsearch.index.query.QueryBuilder;
+import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.script.ScriptService;
+import org.elasticsearch.search.SearchHit;
+import org.elasticsearch.search.SearchHits;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -19,8 +26,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
 
@@ -34,6 +40,9 @@ import static org.elasticsearch.common.xcontent.XContentFactory.jsonBuilder;
 public class TransportClientTest {
 
     private static final Logger logger = LoggerFactory.getLogger(ESRepository.class);
+
+    @Autowired
+    private TransportClient client;
 
     @Autowired
     private TestIndexRepository testIndexRepository;
@@ -91,52 +100,83 @@ public class TransportClientTest {
     }
 
     @Test
-    public void testDeleteDoc(){
-        testIndexRepository.delById("book-index","book","123");
-        testIndexRepository.delById("book-index","book","456");
-        testIndexRepository.delById("book-index","book","789");
+    public void testDeleteDoc() {
+        testIndexRepository.delById("book-index", "book", "123");
+        testIndexRepository.delById("book-index", "book", "456");
+        testIndexRepository.delById("book-index", "book", "789");
     }
 
     @Test
-    public void testUpdateDoc(){
+    public void testUpdateDoc() {
         // 使用map 更新
-        Map<String,Object> map = new HashMap<>();
+        Map<String, Object> map = new HashMap<>();
         map.put("name", "Java编程思想");
         map.put("author", "Bruce Eckel");
         map.put("pubinfo", "机械工业出版社");
         map.put("pubtime", "2007-6");
         map.put("desc", "本书赢得了全球程序员的广泛赞誉，即使是最晦涩的概念，在Bruce Eckel的文字亲和力和小而直接的编程示例面前也会化解于无形。从Java的基础语法到最高级特性（深入的面向对象概念、多线程、自动项目构建、单元测试和调试等），本书都能逐步指导你轻松掌握。从本书获得的各项大奖以及来自世界各地的读者评论中，不难看出这是一本经典之作。本书共22章，包括操作符、控制执行流程、访问权限控制、复用类、多态、接口、通过异常处理错误、字符串、泛型、数组、容器深入研究、JavaI/O系统、枚举类型、并发以及图形化用户界面等内容。这些丰富的内容，包含了Java语言基础语法以及高级特性，适合各个层次的Java程序员阅读，同时也是高等院校讲授面向对象程序设计语言以及Java语言的绝佳教材和参考书。");
-        testIndexRepository.updateById(map,"book-index","book","123");
+        testIndexRepository.updateById(map, "book-index", "book", "123");
 
         // 使用script语法字符串更新
         String scriptData = "ctx._source.author = \"闫洪磊\";" +
-                        "ctx._source.name = \"Activiti实战\";" +
-                        "ctx._source.pubinfo = \"机械工业出版社\";" +
-                        "ctx._source.pubtime = \"2015-01-01\";" +
-                        "ctx._source.desc = \"《Activiti实战 》立足于实践，不仅让读者知其然，全面掌握Activiti架构、功能、用法、技巧和最佳实践，广度足够；而且让读者知其所以然，深入理解Activiti的源代码实现、设计模式和PVM，深度也足够。《Activiti实战 》一共四个部分：准备篇（1~2章）介绍了Activiti的概念、特点、应用、体系结构，以及开发环境的搭建和配置；基础篇（3~4章）首先讲解了Activiti Modeler、Activiti Designer两种流程设计工具的详细使用，然后详细讲解了BPMN2.0规范；实战篇（5~14章）系统讲解了Activiti的用法、技巧和最佳实践，包含流程定义、流程实例、任务、子流程、多实例、事件以及监听器等；高级篇（15~21）通过集成WebService、规则引擎、JPA、ESB等各种服务和中间件来阐述了Activiti不仅仅是引擎，实际上是一个BPM平台，最后还通过源代码对它的设计模式及PVM进行了分析。\"";
-        testIndexRepository.updateById(scriptData,"book-index","book","456");
+                "ctx._source.name = \"Activiti实战\";" +
+                "ctx._source.pubinfo = \"机械工业出版社\";" +
+                "ctx._source.pubtime = \"2015-01-01\";" +
+                "ctx._source.desc = \"《Activiti实战 》立足于实践，不仅让读者知其然，全面掌握Activiti架构、功能、用法、技巧和最佳实践，广度足够；而且让读者知其所以然，深入理解Activiti的源代码实现、设计模式和PVM，深度也足够。《Activiti实战 》一共四个部分：准备篇（1~2章）介绍了Activiti的概念、特点、应用、体系结构，以及开发环境的搭建和配置；基础篇（3~4章）首先讲解了Activiti Modeler、Activiti Designer两种流程设计工具的详细使用，然后详细讲解了BPMN2.0规范；实战篇（5~14章）系统讲解了Activiti的用法、技巧和最佳实践，包含流程定义、流程实例、任务、子流程、多实例、事件以及监听器等；高级篇（15~21）通过集成WebService、规则引擎、JPA、ESB等各种服务和中间件来阐述了Activiti不仅仅是引擎，实际上是一个BPM平台，最后还通过源代码对它的设计模式及PVM进行了分析。\"";
+        testIndexRepository.updateById(scriptData, "book-index", "book", "456");
 
         // 使用JSON对象数据格式更新
         JSONObject jsonObject = new JSONObject();
-        jsonObject.put("name","深入理解ElasticSearch");
-        jsonObject.put("author","〔美〕拉斐尔·酷奇");
-        jsonObject.put("pubinfo","机械工业出版社");
-        jsonObject.put("pubtime","2016-01");
-        jsonObject.put("desc","本书内容丰富，不仅深入介绍了Apache Lucene的评分机制、查询DSL、底层索引控制，而且介绍了ElasticSearch的分布式索引机制、系统监控及性能优化、用户体验的改善、Java API的使用，以及自定义插件的开发。本书文笔优雅，辅以大量翔实的实例，能帮助读者快速提高ElasticSearch水平。需要提醒读者的是，本书的目标读者是ElasticSearch的中高级用户，如果读者对ElasticSearch的基础概念诸如Mapping、Types等缺乏了解的话，可先阅读作者的另外一本针对初学者的书籍《ElasticSearch Server》");
-        testIndexRepository.updateById(jsonObject,"book-index","book","789");
-
+        jsonObject.put("name", "深入理解ElasticSearch");
+        jsonObject.put("author", "〔美〕拉斐尔·酷奇");
+        jsonObject.put("pubinfo", "机械工业出版社");
+        jsonObject.put("pubtime", "2016-01");
+        jsonObject.put("desc", "本书内容丰富，不仅深入介绍了Apache Lucene的评分机制、查询DSL、底层索引控制，而且介绍了ElasticSearch的分布式索引机制、系统监控及性能优化、用户体验的改善、Java API的使用，以及自定义插件的开发。本书文笔优雅，辅以大量翔实的实例，能帮助读者快速提高ElasticSearch水平。需要提醒读者的是，本书的目标读者是ElasticSearch的中高级用户，如果读者对ElasticSearch的基础概念诸如Mapping、Types等缺乏了解的话，可先阅读作者的另外一本针对初学者的书籍《ElasticSearch Server》");
+        testIndexRepository.updateById(jsonObject, "book-index", "book", "789");
     }
 
     @Test
-    public void testQuery(){
+    public void testQuery() {
+        SearchResponse searchResponse = client.prepareSearch("book-index").setTypes("book")
+                .setSearchType(SearchType.DFS_QUERY_THEN_FETCH)
+                // string 域 index 属性默认是 analyzed 。如果我们想映射这个字段为一个精确值，我们需要设置它为 not_analyzed
+                // 默认， Elasticsearch 使用 standard 分析器， 但你可以指定一个内置的分析器替代它，例如 whitespace 、 simple 和 `english`：
+                // 所以这时候会分词匹配,也就是会把"闫洪磊" 拆分成'闫'、'洪'、'磊'
+                .setQuery(QueryBuilders.termQuery("author", "闫")).execute().actionGet();
 
+        SearchHits searchHits = searchResponse.getHits();
+        Iterator<SearchHit> it= searchHits.iterator();
+        while (it.hasNext()){
+            SearchHit searchHit = it.next();
+            Map<String, Object> source = searchHit.getSource();
+            System.out.println(source);
+        }
     }
 
 
 
+    @Test
+    public void testBoolQuery(){
+        // 根据作者名称查询文章.
+        // 使用BoolQueryBuilder 复合查询
+        BoolQueryBuilder boolQueryBuilder = QueryBuilders.boolQuery();
+        boolQueryBuilder.must(QueryBuilders.matchQuery("author", "闫洪磊"));
+        boolQueryBuilder.must(QueryBuilders.matchQuery("pubinfo", "机械工业出版社"));
 
-
-
+        SearchResponse bookResponse = client.prepareSearch("book-index")
+                .setTypes("book")
+                .setQuery(boolQueryBuilder).setFrom(0).setSize(10)
+                .execute().actionGet();
+        SearchHits hits = bookResponse.getHits();
+        Iterator<SearchHit> iterator = hits.iterator();
+        List<Map<String, Object>> list = new ArrayList<>();
+        while (iterator.hasNext()) {
+            SearchHit hit = iterator.next();
+            Map<String, Object> sourceMap = hit.getSource();
+            list.add(sourceMap);
+        }
+        System.out.println(list);
+    }
 
 
 
