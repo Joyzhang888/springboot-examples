@@ -122,8 +122,6 @@ public class ESRepository<T> {
 		log.info("更新数据状态信息，status:{}", updateResponse.status().getStatus());
 	}
 
-
-
 	/**
      * 添加数据
 	 * 类型：JSONObject
@@ -188,7 +186,6 @@ public class ESRepository<T> {
 			log.info("索引参数为空.");
 			return false;
 		}
-
 		IndicesExistsResponse iep = client.admin().indices().exists(new IndicesExistsRequest(index)).actionGet();
 		if (iep.isExists()) {
 			log.info("此索引 [" + index + "] 已经在ES集群里存在");

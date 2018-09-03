@@ -1,10 +1,11 @@
-package com.hong.elaticsearch;
+package com.hong.elaticsearch.transport;
 
 
 import com.alibaba.fastjson.JSONObject;
 import com.hong.elasticsearch.ElasticsearchApplication;
 import com.hong.elasticsearch.repository.ESRepository;
 import com.hong.elasticsearch.repository.TestIndexRepository;
+import org.elasticsearch.action.search.SearchRequest;
 import org.elasticsearch.action.search.SearchResponse;
 import org.elasticsearch.action.search.SearchType;
 import org.elasticsearch.action.update.UpdateResponse;
@@ -145,14 +146,13 @@ public class TransportClientTest {
                 .setQuery(QueryBuilders.termQuery("author", "闫")).execute().actionGet();
 
         SearchHits searchHits = searchResponse.getHits();
-        Iterator<SearchHit> it= searchHits.iterator();
-        while (it.hasNext()){
+        Iterator<SearchHit> it = searchHits.iterator();
+        while (it.hasNext()) {
             SearchHit searchHit = it.next();
             Map<String, Object> source = searchHit.getSource();
             System.out.println(source);
         }
     }
-
 
 
     @Test

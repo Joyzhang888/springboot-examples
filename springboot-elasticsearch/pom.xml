@@ -36,10 +36,16 @@
         <dependency>
             <groupId>org.elasticsearch.client</groupId>
             <artifactId>elasticsearch-rest-client</artifactId>
-            <version>5.6.8</version>
+            <version>${elasticsearch.version}</version>
         </dependency>
 
-
+        <!-- jest -->
+        <!-- https://github.com/searchbox-io/Jest -->
+        <dependency>
+            <groupId>io.searchbox</groupId>
+            <artifactId>jest</artifactId>
+            <version>5.3.3</version>
+        </dependency>
 
         <!-- IK分词器 -->
         <!-- https://mvnrepository.com/artifact/org.elasticsearch/elasticsearch-analysis-ik -->
