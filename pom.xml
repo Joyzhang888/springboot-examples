@@ -43,6 +43,7 @@
         <module>springboot-dubbo</module>
         <module>springboot-mongo</module>
         <module>springboot-elasticsearch</module>
+        <module>springboot-actuator</module>
     </modules>
 
     <properties>

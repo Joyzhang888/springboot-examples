@@ -1,0 +1,41 @@
+
+# 设置端口
+server:
+  port: 9999
+# 设置服务名
+spring:
+  application:
+    name: springboot-actuator
+
+# 关闭安全验证
+management:
+  security:
+    enabled: false
+  # 制定端口号,不制定则和该服务器server.port相同
+  # port: 8818
+
+  # 禁用某项功能
+  health:
+    mail:
+      enabled: false
+
+# 结合 spring-boot-starter-security 开启 basic 账户验证
+security:
+    basic:
+       #代表开启账号密码认证
+       enabled: true
+    # 配置用户名 和 密码
+    user:
+       name: root
+       password: admin
+
+
+
+
+
+
+
+
+
+
+
