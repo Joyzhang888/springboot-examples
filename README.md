@@ -40,7 +40,7 @@ spring boot 学习系列 (使用版本 1.5.3)
 
 ## 测试运行
 ```
-git clone https://github.com/t-hong/vue2-manage.git
+git clone https://github.com/t-hong/springboot-examples.git
 
 jdk8
 
